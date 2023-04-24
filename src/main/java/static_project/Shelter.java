@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import utility.DateFormat;
+
 public class Shelter {
 
 	public static void hensu() {
@@ -228,6 +230,23 @@ public class Shelter {
 		// コンソールに出力
 		System.out.println(strDate);
 
+	}
+
+	public static void sampleMethod2() {
+		Date date = new Date();
+
+		String strDate = "";
+
+		// yyyy/MM/dd
+		strDate = DateFormat.dateFormatSlash(date);
+
+		System.out.println(strDate);
+
+		// 以下を追加
+		// yyyy年MM月dd日
+		strDate = DateFormat.dateFormatKanji(date);
+
+		System.out.println(strDate);
 	}
 
 	// 変数dateを変換するメソッド
